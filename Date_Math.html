@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice with date and math</title>
+</head>
+<body>
+    
+
+    <script>
+    var MyBirthday = new Date(2000,05,23,23,40,30,100);
+    //document.write( MyBirthday);
+    var day = MyBirthday.getDate();
+    var month = MyBirthday.getMonth();
+    var year = MyBirthday.getFullYear();
+
+    var hour = MyBirthday.getHours();
+    var minute = MyBirthday.getMinutes();
+    var seconds = MyBirthday.getSeconds();
+
+    document.write("Im born on "+ day+" of month "+(month+1)+" of year "+year+"<br>"
+                +"at "+ hour+" and "+minute +" minutes of night");
+    document.write("<hr><h2>Now Math functions</h2>");
+//========================================================================
+//========================================================================
+//========================================================================
+//Math functions
+    var vector = [];
+    for (i = 0; i < 5; i++) {
+            vector.push( Math.random()*5);
+            document.write(" || " + vector[i] + " || ");
+        }
+    document.write("<br>---round----<br>");
+    for (x in vector){
+        document.write(" "+Math.round(vector[x])+" ");
+    }
+
+    document.write("<br>---floor----<br>");
+    for (x in vector){
+        document.write(" "+Math.floor(vector[x])+" ");
+    }
+
+    document.write("<br>---ceil----<br>");
+    for (x in vector){
+        document.write(" "+Math.ceil(vector[x])+" ");
+    }
+
+    document.write("<br>---max----<br>");
+    document.write(" "+Math.max.apply(null, vector)+" ");
+    
+    document.write("<br>---min---<br>");
+    var min = Math.min.apply(null, vector );
+    document.write(" "+min+" ");
+    </script>
+</body>
+</html>
